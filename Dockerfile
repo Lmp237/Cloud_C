@@ -8,5 +8,5 @@ COPY ./templates /app/templates/
 COPY requirements.txt /app/
 WORKDIR /app
 RUN pip install -r requirements.txt
-COPY app.py dbconnect.py /app/
+COPY web/app.py web/dbconnect.py /app/
 ENTRYPOINT ["python","app.py"]
