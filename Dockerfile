@@ -3,9 +3,9 @@ RUN mkdir -p /app & \
     mkdir -p /app/templates & \
     mkdir -p /app/static
 RUN /usr/local/bin/python -m pip install --upgrade pip
-COPY ./static /app/static/
-COPY ./templates /app/templates/
-COPY requirements.txt /app/
+COPY web/static /app/static/
+COPY web/templates /app/templates/
+COPY web/requirements.txt /app/
 WORKDIR /app
 RUN pip install -r requirements.txt
 COPY web/app.py web/dbconnect.py /app/
