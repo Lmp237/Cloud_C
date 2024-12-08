@@ -88,18 +88,10 @@ spec:
         - mountPath: /var/lib/mysql
           name: tripmeal-data
         env:
-        - name: DATABASE_HOST
-          value: "db"
-        - name: DATABASE_PORT
-          value: "3306"
-        - name: TRIPMEAL_KEY
-          value: "my-secret-key"
-        - name: SERVER_PORT
-          value: "5000"
         - name: DATABASE_NAME
           value: "tripmealdb"
         - name: DATABASE_USER
-          value: "root"
+          value: "root" 
         - name: MYSQL_ROOT_PASSWORD
           value: "my-secret-pw"
   volumeClaimTemplates:
