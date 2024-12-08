@@ -1,0 +1,20 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+  <div class="col-lg-offset-1">
+    <h3>Your weekly menu is</h3>
+    <ul>
+      {% if menu|length %}
+      <li>Monday    <a href="/recipe?rid={{menu[0][0]}}">{{menu[0][1]}}</a></li>
+      <li>Tuesday   <a href="/recipe?rid={{menu[1][0]}}">{{menu[1][1]}}</a></li>
+      <li>Wednesday <a href="/recipe?rid={{menu[2][0]}}">{{menu[2][1]}}</a></li>
+      <li>Thursday  <a href="/recipe?rid={{menu[3][0]}}">{{menu[3][1]}}</a></li>
+      <li>Friday    <a href="/recipe?rid={{menu[4][0]}}">{{menu[4][1]}}</a></li>
+      <li>Saturday  <a href="/recipe?rid={{menu[5][0]}}">{{menu[5][1]}}</a></li>
+      <li>Sunday    <a href="/recipe?rid={{menu[6][0]}}">{{menu[6][1]}}</a></li>
+      {% endif %}
+    </ul>
+  </div>
+
+{% endblock %}
